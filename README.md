@@ -73,7 +73,7 @@ Swifty Financial Services (founded 2010) operates in the payment processing indu
 ## Methodology  
 1. **Class Balancing**: SMOTE oversampling (473 → 275,190 samples)
 2. **Model Training**: Logistic Regression, Decision Tree, Random Forest
-3. **Evaluation**: ROC-AUC (0.8736), Precision (91%), Recall (75%)
+3. **Evaluation**: ROC-AUC (0.9999), Precision (100%), Recall (100%)
 4. **Deployment**: Joblib-serialized Random Forest model
 
 ---
@@ -87,7 +87,7 @@ Swifty Financial Services (founded 2010) operates in the payment processing indu
 
 **Key Observations:**  
 - 99.83% legitimate transactions  
-- High kurtosis in V14 (-19.2) indicating fraud patterns  
+ 
 
 ---
 
@@ -95,7 +95,7 @@ Swifty Financial Services (founded 2010) operates in the payment processing indu
 
 | Table    | Column    | Issue                 | Magnitude | Solvable | Resolution               |
 |----------|-----------|-----------------------|-----------|----------|--------------------------|
-| Main     | Class     | 578:1 imbalance       | High      | Yes      | SMOTE oversampling       |
+| Main     | Class     | 582:1 imbalance       | High      | Yes      | SMOTE oversampling       |
 | Main     | Time      | Redundant feature     | Medium    | Yes      | Column removal           |
 | Main     | Amount    | Scale variance        | High      | Yes      | MinMax normalization     |
 
@@ -114,22 +114,22 @@ Swifty Financial Services (founded 2010) operates in the payment processing indu
 ## Insights Deep Dive  
 
 ### Category 1: Class Imbalance Handling  
-- **Insight 1**: SMOTE increased fraud recall from 62% to 75%  
-- **Insight 2**: 913 false positives prevented through threshold tuning  
+- **Insight 1**: SMOTE increased fraud recall from 74% to 99%  "Random Forest before & after SMOTE"
+- **Insight 2**: 23 false positives prevented through threshold tuning  
   
 
 ### Category 2: Model Performance  
-- **Insight 1**: RF AUC (0.8736) outperforms LR (0.8076)  
+- **Insight 1**: RF AUC (0.9999) outperforms LR (0.9425)  
 - **Insight 2**: 56ms average prediction latency enables real-time use  
 
 
 ### Category 3: Feature Analysis  
-- **Insight 1**: V17 shows 2.3σ difference in fraud cases  
-- **Insight 2**: Amount has 0.32 correlation with fraud  
+- **Insight 1**: V17 shows 9.3σ difference in fraud cases  
+- **Insight 2**: V11 has 0.15 correlation with Class  
 
 
 ### Category 4: Operational Impact  
-- **Insight 1**: 32hr → 8min average detection time  
+- **Insight 1**: 32hr → 11 min average detection time  
 - **Insight 2**: €18.23 cost per detected fraud case  
 
 
@@ -137,10 +137,8 @@ Swifty Financial Services (founded 2010) operates in the payment processing indu
 
 ## Recommendations  
 1. **Immediate Implementation**: Deploy Random Forest model to production API  
-2. **Monitoring**: Establish drift detection for V14/V17 features  
-3. **Optimization**: Quantile-based amount binning for improved scaling  
-4. **Staffing**: Reassign 40% manual reviewers to exception handling  
-5. **Customer Comms**: Implement fraud confirmation SMS within 10min  
+2. **Monitoring**: Establish drift detection for V7/V17 features  
+3. **Customer Comms**: Implement fraud confirmation SMS within 11min  
 
 ---
 
@@ -153,7 +151,7 @@ Swifty Financial Services (founded 2010) operates in the payment processing indu
 
 ## Technical Details  
 **Tools:**  
-- Python 3.8 (Pandas, Scikit-learn, Imbalanced-learn)  
+- Python 3.13 (Pandas, Scikit-learn)  
 - Jupyter Notebook for EDA  
 - Joblib for model serialization  
 
