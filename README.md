@@ -1,22 +1,22 @@
 # Credit Card Fraud Detection Analysis Report
 
 ## Table of Contents
-- Project Name
-- Project Background
-- Project Goals
-- Insights and Recommendations
-- Data Collection and Sources
-- Formal Data Governance
-- Regulatory Reporting
-- Methodology
-- Data Structure & Initial Checks
-- Documenting Issues
-- Executive Summary
-- Insights Deep Dive
-- Recommendations
-- Future Work
-- Technical Details
-- Assumptions and Caveats
+- [Project Name](#project-name)
+- [Project Background](#project-background)
+- [Project Goals](#project-goals)
+- [Insights and Recommendations](#insights-and-recommendations)
+- [Data Collection and Sources](#data-collection-and-sources)
+- [Formal Data Governance](#formal-data-governance)
+- [Regulatory Reporting](#regulatory-reporting)
+- [Methodology](#methodology)
+- [Data Structure & Initial Checks](#data-structure--initial-checks)
+- [Documenting Issues](#documenting-issues)
+- [Executive Summary](#executive-summary)
+- [Insights Deep Dive](#insights-deep-dive)
+- [Recommendations](#recommendations)
+- [Future Work](#future-work)
+- [Technical Details](#technical-details)
+- [Assumptions and Caveats](#assumptions-and-caveats)
 
 ---
 
