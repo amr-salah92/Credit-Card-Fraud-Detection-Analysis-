@@ -64,7 +64,7 @@ Swifty Financial Services (founded 2010) operates in the payment processing indu
 ---
 
 ## Regulatory Reporting  
-- PSD2 compliance achieved through transaction risk scoring
+- PSD2 "Payment Services Directive" compliance achieved through transaction risk scoring
 - Audit trail maintained for all model predictions
 - EU 2016/679 adherence via full feature anonymization
 
